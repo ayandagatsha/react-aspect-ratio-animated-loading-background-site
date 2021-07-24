@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+/* Apply border box size to all elements so border size
+doesn't increase due to padding or contents. Optional, 
+font placement here is perfect. */
+* {
+    box-sizing: border-box;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Ensure the whole screen of the web page is covered
+by a central image an does a fade in scale from 
+microsize to fullscreen effect*/
+html, body {
+    margin: 0;
 }
+
+
+#container
+{
+
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/src/bg.jpg" );
+
+}
+
+
+
+
+
+.portal{
+
+
+  
+  
+  width: 100px;
+  height: 100px;
+    animation: yourAnimation 2s ease-in 1s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes yourAnimation {
+    0%{
+       
+        transform: scale(0.0);
+        opacity: 0;
+    }
+
+    100%{
+   
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
